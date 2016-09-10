@@ -6,6 +6,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 <!-- StyleSheet -->
 <link rel="stylesheet" href="assets/css/style.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
 	<title>New York Times</title>
 </head>
 <body>
@@ -23,7 +25,20 @@
 			</div>
 			<div class="form-group">
 			  <label for="number">Number of Records to Retrieve:</label>
-			  <input type="text" class="form-control" id="number">
+			  	<!-- dropDown menu -->
+			  	<div class="dropdown">
+				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+				    Dropdown
+				    <span class="caret"></span>
+				  </button>
+				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+				    <li><a href="#">Action</a></li>
+				    <li><a href="#">Another action</a></li>
+				    <li><a href="#">Something else here</a></li>
+				    <li role="separator" class="divider"></li>
+				    <li><a href="#">Separated link</a></li>
+				  </ul>
+				</div>
 			</div>
 			 <div class="form-group">
 			  <label for="start">Start Year (Optional):</label>
@@ -33,13 +48,19 @@
 			  <label for="end">End Year (Optional):</label>
 			  <input type="text" class="form-control" id="end">
 			</div> 
+			<div class="buttonsDiv">
+				<button type="button" class="btn btn-success fa fa-search" aria-hidden="true"> Search</button>
+				<button type="button" class="btn btn-success fa fa-times" aria-hidden="true""> Clear Results</button>
+			</div>
 		  </div>
 		</div>
 	</div>
 	<div class="row">
 		<div class="panel panel-default">
-		  <div class="panel-heading">Top Articles</div>
-		  <div class="panel-body">Panel Content</div>
+		  <div class="panel-heading"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Top Articles</div>
+		  <div class="panel-body">
+			<div class"resultsDisplayed"></div>
+		  </div>
 		</div>
 	</div>
 
