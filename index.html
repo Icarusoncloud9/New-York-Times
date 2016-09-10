@@ -27,19 +27,19 @@
 			  <input type="text" class="form-control" id="search">
 			</div>
 			<div class="form-group">
+			<label for="number">Number of Records to Retrieve:</label>
 			<!-- dropDown menu -->
 			  	<div class="dropdown">
 				  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-				  	<label for="number">Number of Records to Retrieve:</label>
-
-				    <span class="caret"></span>
+				  0
+				  <span class="caret"></span>
 				  </button>
 				  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-				    <li><a href="#">1</a></li>
-				    <li><a href="#">2</a></li>
-				    <li><a href="#">3</a></li>
-				    <li><a href="#">4</a></li>
-				    <li><a href="#">5</a></li>
+				    <li data-num ="1"><a href="#">1</a></li>
+				    <li data-num ="2"><a href="#">2</a></li>
+				    <li data-num ="3"><a href="#">3</a></li>
+				    <li data-num ="4"><a href="#">4</a></li>
+				    <li data-num ="5"><a href="#">5</a></li>
 				  </ul>
 				</div>
 				<!-- end dropdown menu -->
@@ -63,7 +63,12 @@
 		<div class="panel panel-default">
 		  <div class="panel-heading"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Top Articles</div>
 		  <div class="panel-body">
-			<div class"resultsDisplayed"></div>
+			<div class"resultsDisplayed">
+				<a href="#" class="list-group-item list-group-item-action articleHeading">
+					<h5 class="list-group-item-heading"><span id=rank> 1 </span> Top Article Heading </h5>
+					<p class="list-group-item-text articleText">Article content</p>
+				</a>	
+			</div>
 		  </div>
 		</div>
 	</div>
