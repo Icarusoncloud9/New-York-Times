@@ -1,4 +1,4 @@
-// Declared Variables
+// Declared Variables ----------------------------------------------------
 // Search bars
 
 var search = $("#search").val();
@@ -8,13 +8,25 @@ var end = $("#end").val();
 
 // Buttons
 
-var search = $("#search");
+var searchButton = $("#searchButton");
 var clearResults = $("clearResults");
 
-
-
+// Url of website
 
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
+
+// Functions -------------------------------------------------------------
+
+
+
+
+
+
+
+// Main code
+
+
+// Getting the Json info
 url += '?' + $.param({
   'api-key': "2a966230874544079d3f4400ec3ef469"
 });
