@@ -5,5 +5,30 @@
 }
 
 #rank{
-	background-color: navy;
+    background-color: #449d44;
+    padding-left: 12px;
+    padding-right: 6px;
+    padding-top: 3px;
+    padding-bottom: 4px;
+    margin-right: 8px;
+    text-align: center;
+    border-radius: 4px;
+    color:#FFF;
+    font-size:18px;
+}
+
+body{
+	font-family: georgia,"times new roman",times,serif;
+}
+
+.list-group-item-heading{
+
+	font-size: 18px;
+	font-weight: bold;
+}
+
+p.list-group-item-text {
+
+	margin-top: 15px;
+	margin-left: 2px;
 }
