@@ -4,19 +4,49 @@
 <!-- Latest compiled and minified CSS & JS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="style.css">
+<!-- StyleSheet -->
+<link rel="stylesheet" href="assets/css/style.css">
 	<title>New York Times</title>
 </head>
 <body>
-<div class="container">
-	<dev class="row">
-		<header>
-			<img src="NYTLogo.jpg">
-		</header>
-	</dev>
+<div class="wrapper">
+	<div class="row">
+		  <img src="assets/images/NYTLogo.jpg">
+	</div>
+	<div class="row">
+		<div class="panel panel-default">
+		  <div class="panel-heading"><i class="fa fa-check-square-o" aria-hidden="true"></i> Search Parameters</div>
+		  <div class="panel-body">
+		  	<div class="form-group">
+			  <label for="search">Search Term:</label>
+			  <input type="text" class="form-control" id="search">
+			</div>
+			<div class="form-group">
+			  <label for="number">Number of Records to Retrieve:</label>
+			  <input type="text" class="form-control" id="number">
+			</div>
+			 <div class="form-group">
+			  <label for="start">Start Year (Optional):</label>
+			  <input type="text" class="form-control" id="start">
+			</div>
+			<div class="form-group">
+			  <label for="end">End Year (Optional):</label>
+			  <input type="text" class="form-control" id="end">
+			</div> 
+		  </div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="panel panel-default">
+		  <div class="panel-heading">Top Articles</div>
+		  <div class="panel-body">Panel Content</div>
+		</div>
+	</div>
 
 </div>
+<!-- JQuery -->
 <script src="//code.jquery.com/jquery.js"></script>
+<!-- Javascript -->
 <script type="text/javascript" src="nyt.js"></script>
 </body>
 </html>
