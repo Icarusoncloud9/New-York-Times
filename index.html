@@ -23,104 +23,117 @@
 
 <body>
 
+
 <div class="wrapper">
 
 	<div class="row">
 
-		  <img src="assets/images/NYTLogo.jpg">
+		<div class="container-fluid">
+
+			<img src="assets/images/NYTLogo.jpg">
+		
+		</div>
 
 	</div>
 
 	<div class="row">
 
-		<div class="panel panel-default">
+		<div class="container-fluid">
 
-		  <div class="panel-heading"><i class="fa fa-check-square-o" aria-hidden="true"></i> Search Parameters</div>
+			<div class="panel panel-default">
 
-		  <div class="panel-body">
+			  <div class="panel-heading"><i class="fa fa-check-square-o" aria-hidden="true"></i> Search Parameters</div>
 
-		  	<div class="form-group">
+			  <div class="panel-body">
 
-			    <label for="search">Search Term:</label>
+			  	<div class="form-group">
 
-				<input type="text" class="form-control" id="search">
+				    <label for="search">Search Term:</label>
 
-			</div>
-
-			<div class="form-group">
-
-				<label for="number">Order of Records to Retrieve:</label>
-
-			
-				<div class="dropdown"> <!-- dropDown menu -->
-
-					<button class="btn btn-default dropdown-toggle" type="button" id="sortitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" value="newest">newest
-					</button>
-
-					<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-
-						<li><a class="records" value="newest" href="#">newest</a></li>
-
-					    <li><a class="records" value="oldest" href="#">oldest</a></li>
-
-					</ul>
+					<input type="text" class="form-control" id="search">
 
 				</div>
 
-			</div> <!-- end dropdown menu -->
+				<div class="form-group">
+
+					<label for="number">Order of Records to Retrieve:</label>
+
+				
+					<div class="dropdown"> <!-- dropDown menu -->
+
+						<button class="btn btn-default dropdown-toggle" type="button" id="sortitem" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" value="newest">newest
+						</button>
+
+						<ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
+							<li><a class="records" value="newest" href="#">newest</a></li>
+
+						    <li><a class="records" value="oldest" href="#">oldest</a></li>
+
+						</ul>
+
+					</div>
+
+				</div> <!-- end dropdown menu -->
 
 
-			<div class="form-group">
+				<div class="form-group">
+				
+					<label for="start">Start Year (Optional):</label>
+				
+					<input type="text" class="form-control" id="start" placeholder="YYYYMMDD">
+				
+				</div>
+				
+				<div class="form-group">
+				
+					<label for="end">End Year (Optional):</label>
+				
+					<input type="text" class="form-control" id="end" placeholder="YYYYMMDD">
+				
+				</div> 
+				
+				<div class="buttonsDiv">
 			
-				<label for="start">Start Year (Optional):</label>
+					<button type="button" class="btn btn-success fa fa-search" aria-hidden="true" id="searchButton"> Search</button>
 			
-				<input type="text" class="form-control" id="start" placeholder="YYYYMMDD">
+					<button type="button" class="btn btn-success fa fa-times" aria-hidden="true" id="clearResults"> Clear Results</button>
+			
+				</div>
+			
+			  </div>
 			
 			</div>
-			
-			<div class="form-group">
-			
-				<label for="end">End Year (Optional):</label>
-			
-				<input type="text" class="form-control" id="end" placeholder="YYYYMMDD">
-			
-			</div> 
-			
-			<div class="buttonsDiv">
-		
-				<button type="button" class="btn btn-success fa fa-search" aria-hidden="true" id="searchButton"> Search</button>
-		
-				<button type="button" class="btn btn-success fa fa-times" aria-hidden="true" id="clearResults"> Clear Results</button>
-		
-			</div>
-		
-		  </div>
-		
-		</div>
 	
+		</div>
+
 	</div>
 	
 
 	<div class="row">
+
+		<div class="container-fluid">
 	
-		<div class="panel panel-default">
-	
-			<div class="panel-heading"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Top Articles</div>
-			
-				<div class="panel-body">
-			
-					<div class="resultsDisplayed"> <!-- Where things will be displayed -->
-			
-						<a href="#" class="list-group-item list-group-item-action articleHeading">
-			
-							<h5 class="list-group-item-heading"><span id=rank></span> Click on any article below </h5>
-			
-							<p class="list-group-item-text articleText">To read more</p>
-			
-						</a>	
-			
+			<div class="panel panel-default">
+		
+				<div class="panel-heading"><i class="fa fa-newspaper-o" aria-hidden="true"></i> Top Articles</div>
+				
+					<div class="panel-body">
+				
+						<div class="resultsDisplayed center-block"> <!-- Where things will be displayed -->
+				
+							<a href="#" class="list-group-item list-group-item-action articleHeading">
+				
+								<h5 class="list-group-item-heading"><span id=rank></span> Click on any article below </h5>
+				
+								<p class="list-group-item-text articleText">To read more</p>
+				
+							</a>	
+				
+						</div>
+				
 					</div>
-			
+				
 				</div>
 			
 			</div>

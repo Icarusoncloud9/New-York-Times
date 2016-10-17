@@ -54,7 +54,17 @@ function create(result) {
 
 	for(var i = 0; i < 10; i++) {
 
+		if (result.response.docs[i].snippet === null) {
+
+			continue;
+
+		}
+
 		var articleDiv = $("<div>");
+
+			articleDiv.attr("class", "container-fluid");
+
+			articleDiv.css({"margin-top": "15px"})
 
 		var articleLink = $("<a>");
 
@@ -74,11 +84,38 @@ function create(result) {
 
 			articleText.text(result.response.docs[i].snippet);
 
+		var articleImage = $("<img>");
+
+
+
+		// Appending everything to the document
+
 		articleLink.append(heading);
 
 		articleLink.append(articleText);
 
 		articleDiv.append(articleLink);
+
+
+		if (result.response.docs[i].multimedia.length === 0 || result.response.docs[i].multimedia === 'null') {
+
+			$(".resultsDisplayed").append(articleDiv);
+
+			continue;
+
+		} else {
+
+			var imagething = "https://static01.nyt.com/" + result.response.docs[i].multimedia[1].url;
+
+			articleImage.attr("src", imagething);
+
+			articleImage.attr("class", "img-responsive");
+
+			articleImage.css({"height": "250", "width": "auto"});
+
+			articleImage.appendTo(articleLink);
+
+		}
 
 		$(".resultsDisplayed").append(articleDiv);
 
@@ -111,54 +148,61 @@ searchButton.on("click", function() {
 
 	 		});
 
-		} else if (start != "") {
+		 	if (search != "" && start != "") {
 
-			website += '?' + $.param({
+				website += '?' + $.param({
 
-	 		'api-key': "2a966230874544079d3f4400ec3ef469",
+		 		'api-key': "2a966230874544079d3f4400ec3ef469",
 
-	 		'q': search,
+		 		'q': search,
 
-	 		'sort': sort,
+		 		'sort': sort,
 
-	 		'begin_date': start
+		 		'begin_date': start
 
-			});
+				});
 
-		} else if (end != "") {
+			} else if (search != "" && end != "") {
 
-			website += '?' + $.param({
+				website += '?' + $.param({
 
-	 		'api-key': "2a966230874544079d3f4400ec3ef469",
+		 		'api-key': "2a966230874544079d3f4400ec3ef469",
 
-	 		'q': search,
+		 		'q': search,
 
-	 		'sort': sort,
+		 		'sort': sort,
 
-	 		'end_date': end
+		 		'end_date': end
 
-			});
+				});
 
-		} else if (start != "" && end != "") {
+			} else if (search != "" && start != "" && end != "") {
 
-			website += '?' + $.param({
+				website += '?' + $.param({
 
-	 		'api-key': "2a966230874544079d3f4400ec3ef469",
+		 		'api-key': "2a966230874544079d3f4400ec3ef469",
 
-	 		'q': search,
+		 		'q': search,
 
-	 		'sort': sort,
+		 		'sort': sort,
 
-	 		'begin_date': start,
+		 		'begin_date': start,
 
-	 		'end_date': end
+		 		'end_date': end
 
-			});
+				});
 
-		} else if (search.length > 0) {
+			} else {
+
+				console.log("All good here!")
+
+			}
+
+		}  else if (search.length == 0) {
 
 			alert("The search bar is empty!");
 
+			return false;
 		}
 	
  	console.log(website);
@@ -187,6 +231,8 @@ searchButton.on("click", function() {
 		throw err;
 
 	});
+
+	website = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 
 });
 
